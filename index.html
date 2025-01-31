@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="profile-card">
+        <img src="img/vito.jpeg" alt="Profile Picture" class="profile-picture" data-testid="profilePicture">
+
+        <h2 data-testid="fullName">Akintomiwa Bewaji</h2>
+        <p class="job-title" data-testid="jobTitle">Intern Front-End Developer</p>
+        
+        <p class="bio" data-testid="shortBio">
+            I am a passionate front-end developer with a keen eye for design and user experience. I specialize in building
+            responsive web applications using HTML, CSS, and JavaScript.
+        </p>
+
+        <p class="location" data-testid="currentLocation">Lagos, Nigeria</p>
+        
+        <p class="email" data-testid="emailAddress">
+            <a href="mailto:akintomiwabewaji@example.com">akintomiwabewaji@gmail.com</a>
+        </p>
+
+        <div class="social-links" data-testid="socialLinks">
+            <a href="https://www.linkedin.com/in/akintomiwa-bewaji-06286a247/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BOGSIN7eMRMGRuSZJxm9LoA%3D%3D" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Akinbewaji" target="_blank">GitHub</a>
+            <a href="https://x.com/AkintomiwaBewa1" target="_blank">Twitter</a>
+        </div>
+
+        <p class="utc-time" data-testid="currentTimeUTC">UTC Time: <span id="utcTime"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

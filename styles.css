@@ -4,18 +4,27 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
     margin: 0;
+}
+
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 50px;
 }
 
 .profile-card {
     background: rgb(255, 255, 255);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 350px;
+    max-width: 800px;
     width: 90%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .profile-picture {
@@ -69,21 +78,162 @@ h2 {
     margin-top: 10px;
 }
 
-@media (max-width: 400px) {
+social-link:hover,
+.social-link:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-color: #667eea;
+    outline: none;
+}
+
+.social-link.twitter:hover,
+.social-link.twitter:focus {
+    background: rgba(29, 161, 242, 0.1);
+    border-color: #1da1f2;
+}
+
+.social-link.github:hover,
+.social-link.github:focus {
+    background: rgba(36, 41, 46, 0.1);
+    border-color: #24292e;
+}
+
+.social-link.linkedin:hover,
+.social-link.linkedin:focus {
+    background: rgba(0, 119, 181, 0.1);
+    border-color: #0077b5;
+}
+
+.interests-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.hobbies-container,
+.dislikes-container {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hobbies-list,
+.dislikes-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.hobby-item,
+.dislike-item {
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.hobby-item {
+    border-left-color: #48bb78;
+}
+
+.dislike-item {
+    border-left-color: #f56565;
+}
+
+.hobby-item:hover,
+.dislike-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
     .profile-card {
-        padding: 15px;
+        padding: 1.5rem;
     }
-
-    .profile-picture {
-        width: 80px;
-        height: 80px;
+    
+    .profile-header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1.5rem;
     }
-
-    h2 {
-        font-size: 18px;
+    
+    .user-name {
+        font-size: 2rem;
     }
+    
+    .interests-section {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+}
 
-    .job-title, .bio, .location, .email, .utc-time {
-        font-size: 12px;
+@media (max-width: 480px) {
+    .profile-card {
+        padding: 1rem;
+        margin: 10px;
+    }
+    
+    .user-name {
+        font-size: 1.75rem;
+    }
+    
+    .user-bio {
+        font-size: 1rem;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-link {
+        width: 100%;
+        max-width: 200px;
+        justify-content: center;
+    }
+    
+    .timestamp-container {
+        padding: 0.75rem;
+    }
+    
+    .current-time {
+        font-size: 1rem;
+    }
+}
+
+/* Focus styles for accessibility */
+.social-link:focus-visible {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* Smooth animations */
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none;
     }
 }

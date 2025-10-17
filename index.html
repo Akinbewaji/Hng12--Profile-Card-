@@ -1,40 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Card</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <head>
 
-    <div class="profile-card">
-        <img src="img/vito.jpeg" alt="Profile Picture" class="profile-picture" data-testid="profilePicture">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile Card - Bewaji Akintomiwa</title>
+        <link rel="stylesheet" href="styles.css">
 
-        <h2 data-testid="fullName">Akintomiwa Bewaji</h2>
-        <p class="job-title" data-testid="jobTitle">Intern Front-End Developer</p>
+    </head>
+
+    <body>
+        <main class="app-container">
         
-        <p class="bio" data-testid="shortBio">
-            I am a passionate front-end developer with a keen eye for design and user experience. I specialize in building
-            responsive web applications using HTML, CSS, and JavaScript.
-        </p>
+            <article class="profile-card" data-testid="profileCard">
 
-        <p class="location" data-testid="currentLocation">Lagos, Nigeria</p>
-        
-        <p class="email" data-testid="emailAddress">
-            <a href="mailto:akintomiwabewaji@example.com">akintomiwabewaji@gmail.com</a>
-        </p>
+                <img 
+                    src="img/vito.jpeg" 
+                    alt="Profile Picture of Bewaji Akintomiwa" 
+                    class="profile-picture" 
+                    data-testid="profilePicture"
+                >
 
-        <div class="social-links" data-testid="socialLinks">
-            <a href="https://www.linkedin.com/in/akintomiwa-bewaji-06286a247/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BOGSIN7eMRMGRuSZJxm9LoA%3D%3D" target="_blank">LinkedIn</a>
-            <a href="https://github.com/Akinbewaji" target="_blank">GitHub</a>
-            <a href="https://x.com/AkintomiwaBewa1" target="_blank">Twitter</a>
-        </div>
+                <h2 data-testid="fullName">Akintomiwa Bewaji</h2>
 
-        <p class="utc-time" data-testid="currentTimeUTC">UTC Time: <span id="utcTime"></span></p>
-    </div>
+                <p class="job-title" data-testid="jobTitle">Intern Front-End Developer</p>
+                
+                <p 
+                    class="bio" data-testid="shortBio">
+                    I am a passionate front-end developer with a keen eye for design and user experience. I specialize in building
+                    responsive web applications using HTML, CSS, and JavaScript.
+                </p>
 
-    <script src="script.js"></script>
+                <p 
+                    class="location" data-testid="currentLocation">Lagos, Nigeria
+                </p>
+                
+                <p 
+                    class="email" data-testid="emailAddress">
+                    <a href="mailto:akintomiwabewaji@example.com">akintomiwabewaji@gmail.com</a>
+                </p>
 
-</body>
+                <div 
+                    class="social-links" data-testid="socialLinks"
+                >
+                    
+                    <a 
+                        href="https://www.linkedin.com/in/akintomiwa-bewaji-06286a247/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BOGSIN7eMRMGRuSZJxm9LoA%3D%3D" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-link linkedin"
+                        data-testid="test-user-social-linkedin"
+                        aria-label="Connect with Akintomiwa's LinkedIn profile"
+                    >
+                            <span class="social-text">LinkedIn</span>
+
+                    </a>
+                    
+                    <a 
+                        href="https://github.com/Akinbewaji" 
+                        target="_blank"  rel="noopener noreferrer"
+                        class="social-link github"
+                        data-testid="test-user-social-github"
+                        aria-label="View Akintomiwa's GitHub profile"
+                    >
+                            <span class="social-text">GitHub</span>
+                    </a>
+                    
+                    <a 
+                        href="https://x.com/AkintomiwaBewa1" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-link twitter"
+                        data-testid="test-user-social-twitter"
+                        aria-label="View Akintomiwa's Twitter profile"
+                    >
+                            <span class="social-text">X</span>
+                    </a>
+
+                </div>
+
+                <p 
+                    class="utc-time" data-testid="currentTimeUTC">UTC Time: <span id="utcTime"></span>
+                </p>
+
+                <section class="interests-section">
+                    <div class="hobbies-container">
+                        <h2 class="section-title">Hobbies & Interests</h2>
+                        <ul class="hobbies-list" data-testid="test-user-hobbies">
+                            <li class="hobby-item">Watching Movies/Anime</li>
+                            <li class="hobby-item">Reading Books and Manga</li>
+                            <li class="hobby-item">Driving</li>
+                            <li class="hobby-item">Gaming</li>
+                            <li class="hobby-item">Coding</li>
+                        </ul>
+                    </div>
+
+                    <div class="dislikes-container">
+                        <h2 class="section-title">Pet Peeves</h2>
+                        <ul class="dislikes-list" data-testid="test-user-dislikes">
+                            <li class="dislike-item">Unhandled Bugs</li>
+                            <li class="dislike-item">Poor Mobile UX</li>
+                            <li class="dislike-item">Slow Network Connection</li>
+                            <li class="dislike-item">Long Loading Times</li>
+                            <li class="dislike-item">Messy Code</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </article>
+            
+        </main>
+
+        <script 
+            src="script.js">
+        </script>
+
+    </body>
+
 </html>
